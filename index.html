@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <title>NETFLIX</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!--Favicon -->
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+
+	<!-- CSS Files -->
+
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/socials.css" />
+	<link rel="stylesheet" href="css/player/YTPlayer.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/prettyPhoto.css" />
+	<!-- Page Styles -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<!-- End Page Styles -->
+
+	<!-- Page Layout Color, night or dark -->
+	<link id="changeable_tone" rel="stylesheet" href="css/dark.css" />
+	<!-- End Page Layout Color -->
+
+	<!-- Page Elements Color -->
+	<link id="changeable_color" rel="stylesheet" href="css/colors/red.css" />
+	<!-- End Page Elements Color -->
+
+	<!-- Theme Panel -->
+	<link rel="stylesheet" href="theme_panel/theme_panel.css" />
+	<!-- End Theme Panel -->
+
+	<!-- End CSS Files -->
+
+</head>
+
+<body class="parallax">
+
+	<!-- Page Loader -->
+	<section id="pageloader" class="white-bg">
+		<div class="outter dark-border">
+			<div class="mid dark-border"></div>
+		</div>
+	</section>
+
+	<!-- Navigation -->
+	<nav id="navigation" class="dark-nav">
+		<!-- Navigation Inner -->
+		<div class="nav-inner">
+			<div class="logo">
+				<!-- Navigation Logo Link -->
+				<a href="#home" class="scroll">
+					<!-- Your Logo -->
+					<img src="images/logo-dark.png" class="site_logo" alt="Logo"/>
+				</a>
+			</div>
+			<!-- Mobile Menu Button -->
+			<a class="mobile-nav-button colored"><i class="fa fa-bars"></i></a>
+			<!-- Navigation Menu -->
+			<div class="nav-menu clearfix semibold">
+				<ul class="nav uppercase oswald">
+					<li><a href="#home" class="scroll">home</a></li>
+					<li><a href="#favoritos" class="scroll">favoritos</a></li>
+				</ul>
+			</div><!-- End Navigation Menu -->
+		</div><!-- End Navigation Inner -->
+	</nav><!-- End Navigation -->
+
+
+
+
+	<!-- Home -->
+	<section id="home" class="container relative">
+
+		<!-- Ful Screen Home -->
+		<div id="fullscreen" class="image-bg soft-black-bg"></div>
+		<!-- End Ful Screen Home -->
+
+		<!-- Home Elements v2 -->
+		<div class="home-elements">
+			<!-- Home Inner -->
+			<div class="home-inner v2 t-center">
+
+				<!-- Home Text Slider -->
+				<div class="home-text-slider relative">
+					<div class="text-slider clearfix">
+						<!-- Home Text Slides -->
+						<ul class="home-texts clearfix t-center semibold">
+							<li class="slide white uppercase">Seja bem vindo!</li>
+							<li class="slide white uppercase">Filmes, séries e muito mais!</li>
+							<li class="slide white uppercase">Sem limites!</li>
+						</ul>
+						<!-- End Home Text Slides -->
+						<!-- Home Fixed Text -->
+					</div>
+				</div>
+				<div class="row">
+					 <form class="form-inline" action="">
+						<input type="text" class="form-control pesquisar" style="display: inline-block" id="texto-pesquisar" placeholder="Pesquisar Filme" name="">
+						<button type="button" id="pesquisar" class="btn btn-default"><i class="fa fa-search"></i>
+						</button>
+
+					</form>
+				</div>
+				<div class="row " >
+							<div class="" id="resp" role="alert">
+
+							</div>
+						</div>
+
+			</div><!-- End Home Inner -->
+		</div><!-- End Home Elements -->
+	</section><!-- End Home Section -->
+
+	<!-- Section Image Bg Style -->
+	<section id="filmes" class="s-01 p-section soft-black-bg-tone parallax">
+		<div class="inner-portfolio clearfix t-left">
+			<div class="f-left p-part">
+				<a href="#" class="plus-button round animated ex-link" data-animation="fadeInLeftBig"
+					data-animation-delay="100"><i class="fa fa-play"></i></a>
+
+			</div>
+			<div class="f-left p-part t-shadow">
+				<h1 class="p-head white oswald uppercase animated" id="titulo" data-animation="fadeInUp" data-animation-delay="200"></h1>
+				<p class="white animated" data-animation="fadeInUp" id="descricao" data-animation-delay="400">	</p>
+				<p class="white animated">Ator: <span id="ator"></span> </p>
+				<p class="white animated">Avaliação:
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+
+				 </p>
+				<button class="home-button-white uppercase oswald semibold animated" data-animation="fadeInUp"
+					data-animation-delay="500" id="addFavorito">	FAVORITO<i class="fa fa-heart-o"></i>
+				</button>
+
+			</div>
+			<div class="f-left p-part t-shadow">
+				<img src="" id="link" class="responsive" alt="filme" />
+			</div>
+		</div>
+	</section>
+	<!-- End Section -->
+
+	<!-- Page Header -->
+	<section id="favoritos" class="page_header">
+		<!-- Inner -->
+		<div class="page_header_inner clearfix">
+			<!-- Left -->
+			<div class="p_head_left f-left">
+				<!-- Header -->
+				<h1 class="p-header oswald uppercase">
+					Seus Filmes Favoritos!
+				</h1>
+				<!-- Description -->
+				<p class="p-desc">
+					Reveja quando quiser!
+				</p>
+			</div>
+			<!-- Right -->
+			<div class="p_head_right f-left t-right">
+				<!-- Back Button -->
+				<a href="#home" class="scroll">
+					<i class="fa fa-angle-left"></i>
+					Voltar
+				</a>
+			</div>
+		</div><!-- End Inner -->
+	</section><!-- End Page Header -->
+
+	<!-- Portfolio Section -->
+	<section id="portfolio" class="container">
+		<!-- Portfolio inner -->
+
+		<div class="portfolio t-center fullwidth relative">
+
+			<!-- Filters -->
+			<div id="options" class="filter-menu fullwidth">
+				<ul id="filters" class="option-set relative normal oswald uppercase" data-option-key="filter">
+					<li><a href="#filter" data-option-value="*" class="selected">Todos</a></li>
+					<li><a href="#filter" data-option-value=".design"><span>Ação</span></a></li>
+					<li><a href="#filter" data-option-value=".branding"><span>Suspense</span></a></li>
+					<li><a href="#filter" data-option-value=".video"><span>Comédia</span></a></li>
+					<li><a href="#filter" data-option-value=".photography"><span>Drama</span></a></li>
+				</ul>
+			</div>
+
+			<!-- Portfolio Items -->
+			<div class="portfolio-items t-center">
+
+				<!-- Item -->
+				<div class="item five branding">
+					<!-- Item Link -->
+					<a href="images/project/02.jpg" data-rel="prettyPhoto[portfolio]" class="work-image">
+						<!-- Item Image -->
+						<img src="images/portfolio/001.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								Red & Dark
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								branding
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five video photography">
+					<!-- Item Link -->
+					<a href="projects/dark_project_01.html" class="work-image ex-link">
+						<!-- Item Image -->
+						<img src="images/portfolio/002.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								eagle
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								video, photography
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five design branding">
+					<!-- Item Link -->
+					<a href="projects/dark_project_02.html" class="work-image ex-link">
+						<!-- Item Image -->
+						<img src="images/portfolio/003.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								big bang
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								design, branding
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five design photography">
+					<!-- Item Link -->
+					<a href="http://vimeo.com/71319358" data-rel="prettyPhoto[portfolio]" class="work-image">
+						<!-- Item Image -->
+						<img src="images/portfolio/004.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								street
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								design, photography
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five video branding">
+					<!-- Item Link -->
+					<a href="images/portfolio/005b.jpg" data-rel="prettyPhoto[portfolio]" class="work-image">
+						<!-- Item Image -->
+						<img src="images/portfolio/005.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								tennis
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								video, branding
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five photography design">
+					<!-- Item Link -->
+					<a href="images/project/03.jpg" data-rel="prettyPhoto[portfolio]" class="work-image">
+						<!-- Item Image -->
+						<img src="images/portfolio/006.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								red dress
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								photography, design
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five design photography">
+					<!-- Item Link -->
+					<a href="projects/dark_project_03.html" class="work-image ex-link">
+						<!-- Item Image -->
+						<img src="images/portfolio/007.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								perspective
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								design, photography
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five branding video">
+					<!-- Item Link -->
+					<a href="projects/dark_project_01.html" class="work-image ex-link">
+						<!-- Item Image -->
+						<img src="images/portfolio/008.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								dance
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								branding, video
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five photography branding">
+					<!-- Item Link -->
+					<a href="http://www.youtube.com/watch?v=mSLAF_DjiDU" data-rel="prettyPhoto[portfolio]" class="work-image">
+						<!-- Item Image -->
+						<img src="images/portfolio/009.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								in pieces
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								branding, photography
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five video photography">
+					<!-- Item Link -->
+					<a href="projects/dark_project_02.html" class="work-image ex-link">
+						<!-- Item Image -->
+						<img src="images/portfolio/010.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								balloons
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								photography, design
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five video design">
+					<!-- Item Link -->
+					<a href="projects/dark_project_03.html" class="work-image ex-link">
+						<!-- Item Image -->
+						<img src="images/portfolio/011.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								dancing
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								design, video
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five video design">
+					<!-- Item Link -->
+					<a href="images/portfolio/012b.jpg" data-rel="prettyPhoto[portfolio]" class="work-image">
+						<!-- Item Image -->
+						<img src="images/portfolio/012.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								forest
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								video, design
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five video photography">
+					<!-- Item Link -->
+					<a href="images/portfolio/013.jpg" data-rel="prettyPhoto[portfolio]" class="work-image">
+						<!-- Item Image -->
+						<img src="images/portfolio/013.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								dawn
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								video, photography
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five video design">
+					<!-- Item Link -->
+					<a href="projects/dark_project_03.html" class="work-image ex-link">
+						<!-- Item Image -->
+						<img src="images/portfolio/014.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								northern
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								video
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+				<!-- Item -->
+				<div class="item five branding photography">
+					<!-- Item Link -->
+					<a href="images/portfolio/015b.jpg" data-rel="prettyPhoto[portfolio]" class="work-image">
+						<!-- Item Image -->
+						<img src="images/portfolio/015.jpg" alt="" />
+						<!-- Item Details -->
+						<div class="item-details">
+							<!-- Item Header -->
+							<h1 class="oswald uppercase white">
+								red paint
+							</h1>
+							<!-- Item Strips -->
+							<span class="portfolio-strips"></span>
+							<!-- Item Description -->
+							<p class="oswald uppercase">
+								branding, photography
+							</p>
+						</div>
+						<!-- End Item Details -->
+					</a>
+					<!-- End Item Link -->
+				</div>
+				<!-- End Item -->
+
+
+			</div><!-- End Portfolio Items -->
+		</div><!-- End Portfolio -->
+	</section><!-- End Portfolio Section -->
+
+
+
+
+	<!-- Footer -->
+	<footer class="footer dark-bg t-center">
+		<!-- Logo -->
+		<img src="images/logo-dark.png" alt="Logo"/>
+		<!-- Text -->
+		<p class="uppercase semibold">
+			©2014 all right reserved. designed by <a href="http://themeforest.net/user/GoldEyes" target="_blank">goldeyes theme</a>
+		</p>
+	</footer>
+	<!-- End Footer -->
+
+
+
+
+
+	<!-- Back To Top Button -->
+	<section id="back-top">
+		<a href="#home" class="scroll t-center white">
+			<i class="fa fa-angle-double-up"></i>
+		</a>
+	</section>
+	<!-- End Back To Top Button -->
+
+
+	<!-- JS Files -->
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.appear.js"></script>
+	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	<script type="text/javascript" src="js/modernizr-latest.js"></script>
+	<script type="text/javascript" src="js/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/jquery.superslides.js"></script>
+	<script type="text/javascript" src="js/jquery.isotope.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.js"></script>
+	<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<!-- Theme Panel -->
+	<script type="text/javascript" src="theme_panel/theme_panel.js"></script>
+	<script type="text/javascript" src="js/pesquisar-filmes.js"></script>
+	<!-- End JS Files -->
+
+</body>
+
+</html>
